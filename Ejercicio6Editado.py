@@ -2,10 +2,10 @@ PENSION = 100000
 
 promedio = float(input("Promedio del estudiante: "))
 
-porcentaje = 10
+porcentaje = 30
 
 if promedio >= 4:
-    porcentaje = -30
+    porcentaje = -50
 
 pago = PENSION + (PENSION * porcentaje / 100)
 
