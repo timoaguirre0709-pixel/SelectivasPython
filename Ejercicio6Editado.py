@@ -1,12 +1,17 @@
-PENSION = 100000
+promedio = float(input("Ingrese el promedio del alumno: "))
+pension = float(input("Ingrese el valor de la pensión: "))
 
-promedio = float(input("Promedio del estudiante: "))
+if promedio >= 4.0:
+    descuento = pension * 0.30
+    total = pension - descuento
+    print("Tiene un descuento del 30%.")
+    print("Total a pagar:", total)
 
-porcentaje = 30
+elif promedio >= 0 and promedio < 4.0:
+    iva = pension * 0.10
+    total = pension + iva
+    print("Debe pagar la pensión completa más el IVA.")
+    print("Total a pagar:", total)
 
-if promedio >= 4:
-    porcentaje = -50
-
-pago = PENSION + (PENSION * porcentaje / 100)
-
-print(f"Total a pagar: ${pago:.2f}")
+else:
+    print("Error: el promedio no puede ser negativo.")
